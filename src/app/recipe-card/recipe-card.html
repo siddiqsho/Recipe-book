@@ -1,0 +1,12 @@
+<div class="parent-cards">
+    <div class="recipe-card">
+        <img class="cards-img" [src]="recipe.image" [alt]="recipe.title">
+        <div class="card-content">
+            <h3>{{recipe.title}}</h3>
+            <p>{{shorted(recipe.description)}}</p>
+            <br>
+            <button class="ingredient-btn">Ингредиенты</button>
+        </div>
+        
+    </div>
+</div>
