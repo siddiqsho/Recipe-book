@@ -16,4 +16,14 @@ export class RecipeCard {
      }
      return text
   }
+
+  flipper:boolean=false;
+
+  flipperCard(){
+   if(this.flipper===false){
+     this.flipper=true
+   }else{
+    this.flipper=false
+   }
+  }
 }

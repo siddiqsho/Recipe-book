@@ -1,12 +1,33 @@
 <div class="parent-cards">
+
     <div class="recipe-card">
-        <img class="cards-img" [src]="recipe.image" [alt]="recipe.title">
-        <div class="card-content">
-            <h3>{{recipe.title}}</h3>
-            <p>{{shorted(recipe.description)}}</p>
-            <br>
-            <button class="ingredient-btn">Ингредиенты</button>
+        <div class="flipper" [class.flipped]="flipper">
+            <div class="front">
+                <img class="cards-img" [src]="recipe.image" [alt]="recipe.title">
+                <div class="card-content">
+                    <h3>{{recipe.title}}</h3>
+                    <p class="front-des">{{shorted(recipe.description)}}</p>
+                    <br>
+                    <button class="ingredient-btn" (click)="flipperCard()">Ингредиенты</button>
+                </div>
+            </div>
+
+            <div class="back">
+
+                <p class="back-desc">{{recipe.description}}</p>
+
+                <div class="ingredient">
+                    <h4>Ингредиенты</h4>
+                    @for(ingredient of recipe.ingredients;track ingredient){
+                    <p class="back-span">
+                        <span>{{ingredient.name}}</span>
+                        <span>{{ingredient.amount}}</span>
+                    </p>
+                    }
+                </div>
+            </div>
         </div>
-        
     </div>
+
+
 </div>
