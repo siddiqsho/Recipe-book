@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
+</head>
 <div class="parent-cards">
 
     <div class="recipe-card">
@@ -8,11 +12,13 @@
                     <h3>{{recipe.title}}</h3>
                     <p class="front-des">{{shorted(recipe.description)}}</p>
                     <br>
-                    <button class="ingredient-btn" (click)="flipperCard()">Ингредиенты</button>
+                    <button class="ingredient-btn" (click)="flipperCard()">Ингредиенты <span class="material-symbols-outlined">chevron_right</span> </button>
                 </div>
             </div>
 
             <div class="back">
+                
+                <div class="back-btn" (click)="flipperCard()"><span class="material-symbols-outlined">chevron_right</span></div>
 
                 <p class="back-desc">{{recipe.description}}</p>
 
@@ -28,6 +34,5 @@
             </div>
         </div>
     </div>
-
-
 </div>
+
