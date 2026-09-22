@@ -1,5 +1,5 @@
 <div class="recipe-container">
-  @for (recipe of recipes; track recipe.title) {
+  @for (recipe of recipesMenu; track recipe.title) {
     <app-recipe-card [recipe]="recipe"></app-recipe-card>
   }
 </div>

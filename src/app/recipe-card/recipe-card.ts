@@ -1,29 +1,20 @@
-import { Component } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component,Input} from '@angular/core';
+import { IRecipe } from '../menu-list/resipeArr';
+import { SlicePipe } from '@angular/common';
 
 @Component({
-  imports: [],
+  imports: [SlicePipe],
   selector: 'app-recipe-card',
   styleUrl: './recipe-card.css',
   templateUrl: './recipe-card.html',
 })
 export class RecipeCard {
-  @Input () recipe:any
+  @Input () recipe !: IRecipe 
 
-  shorted(text:string){
-    if(text.length >70){
-      return text.slice(0,70)+'...'
-     }
-     return text
-  }
 
   flipper:boolean=false;
 
   flipperCard(){
-   if(this.flipper===false){
-     this.flipper=true
-   }else{
-    this.flipper=false
-   }
+    this.flipper = !this.flipper
   }
 }

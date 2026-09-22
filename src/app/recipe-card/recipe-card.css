@@ -129,6 +129,10 @@ h4 {
   width: 100%;
 }
 
+.ingredient-btn,.back-btn{
+  cursor: pointer;
+}
+
 .ingredient-btn {
   width: 150px;
   padding: 5px;
@@ -140,46 +144,38 @@ h4 {
   transition: transform 0.5s ease;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .ingredient-btn:hover {
   box-shadow: 0 0 10px #f07d19;
-
 }
 
 .ingredient-btn span {
-  font-size: 22px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-left: 10px;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+.back-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
 .back-btn {
-  transform: rotateY(180deg);
-  width: 40px;
-  height: 27px;
-  border: 2px solid rgba(244, 165, 96, 0.158);
-  background-color: #f07d1925;
-  color: rgba(255, 255, 255, 0.116);
-  border-radius: 8px;
-
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.back-btn:hover {
+  width:30px;
+  height: 22px;
   border: 2px solid sandybrown;
   background-color: #f07d19;
   color: white;
+  border-radius: 8px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.back-btn:hover{
+  box-shadow: 0 0 10px sandybrown;
+}
 @media (max-width: 480px) {
   .recipe-card {
     width: 100%;
