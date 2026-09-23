@@ -1,13 +1,6 @@
-interface IIngredients{
-    name:string,amount:string
-}
-export interface IRecipe{
-    title:string,
-    image:string,
-    description:string,
-    ingredients:IIngredients[]
-}
-export const recipes:IRecipe[]=[
+import { IRecipe } from "../interfaces/resipe.interfaces";
+
+export const RESIPES:IRecipe[]=[
   {
     title: "Лазанья",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH76K-_IWspVVt3QOxIbRMYIMkhJEd_CoRj5WrYI_Qog&s=10",

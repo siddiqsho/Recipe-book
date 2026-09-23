@@ -1,5 +1,5 @@
 import { Component,Input} from '@angular/core';
-import { IRecipe } from '../menu-list/resipeArr';
+import { IRecipe } from '../shared/interfaces/resipe.interfaces';
 import { SlicePipe } from '@angular/common';
 
 @Component({

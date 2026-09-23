@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RecipeCard } from '../recipe-card/recipe-card';
-import { recipes, IRecipe } from './resipeArr';
+import { IRecipe } from '../shared/interfaces/resipe.interfaces';
+import { RESIPES } from '../shared/constants/recipe.constans';
 
 @Component({
   imports: [RecipeCard],
@@ -9,5 +10,5 @@ import { recipes, IRecipe } from './resipeArr';
   templateUrl: './menu-list.html',
 })
 export class MenuList {
-   recipesMenu:IRecipe[]=recipes
+   recipesMenu:IRecipe[]=RESIPES
 }
